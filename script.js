@@ -13,7 +13,11 @@ const stepFourBtn = document.getElementById('four');
 // );
 
 const stepOneForm = document.getElementById('stepOneForm');
-const stepTwoPage = document.getElementById('stepTwoPage')
+const stepTwoPage = document.getElementById('stepTwoPage');
+const stepThreePage = document.getElementById('stepThreePage');
+const stepFourPage = document.getElementById('stepFourPage');
+
+
 
 stepOneForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -78,6 +82,10 @@ const proPrice = document.getElementById('proPrice');
 const d1 = document.getElementById('d1');
 const d2 = document.getElementById('d2');
 const d3 = document.getElementById('d3');
+const checkPrice1 = document.getElementById('checkprice1');
+const checkPrice2 = document.getElementById('checkprice2');
+const checkPrice3 = document.getElementById('checkprice3');
+const plantype = document.getElementById('planType');
 
 
 
@@ -94,6 +102,10 @@ togglePlan.addEventListener('click', ()=>{
         d1.style.display = 'none';
         d2.style.display = 'none';
         d3.style.display = 'none';
+        checkPrice1.textContent = '+$1/mo';
+        checkPrice2.textContent = '+$2/mo';
+        checkPrice3.textContent = '+$2/mo';
+        plantype.textContent = '(Monthly)';
     }else{
         togglePlan.setAttribute('class', 'fa-solid fa-toggle-on');
         monthlyText.classList.add('inactive');
@@ -104,6 +116,10 @@ togglePlan.addEventListener('click', ()=>{
         d1.style.display = 'block';
         d2.style.display = 'block';
         d3.style.display = 'block';
+        checkPrice1.textContent = '+$10/yr';
+        checkPrice2.textContent = '+$20/yr';
+        checkPrice3.textContent = '+$20/yr';
+        plantype.textContent = '(Yearly)';
     }
 
 
@@ -130,8 +146,90 @@ toPageOne.addEventListener('click', () => {
 
 toPageThree.addEventListener('click', () => {
     stepTwoPage.style.display = 'none';
+    stepThreePage.style.display = 'flex';
     stepThreeBtn.classList.add('active');
     stepTwoBtn.classList.remove('active');
 }) 
 
+// --------------------------------step 3----------------------------------
 
+const itemOne = document.getElementById('item1');
+const itemTwo = document.getElementById('item2');
+const itemThree = document.getElementById('item3');
+const checkOne = document.getElementById('check1');
+const checkTwo = document.getElementById('check2');
+const checkThree = document.getElementById('check3');
+const markOne = document.getElementById('mark1');
+const markTwo = document.getElementById('mark2');
+const markThree = document.getElementById('mark3');
+
+itemOne.addEventListener('click', ()=>{
+    itemOne.classList.toggle('activecheck');
+    checkOne.classList.toggle('checked');
+
+    const display1 = getComputedStyle(markOne).getPropertyValue('display');
+
+    if (display1 === 'none') {
+        markOne.style.display = 'block';
+    }else{
+        markOne.style.display = 'none';
+
+    }
+});
+itemTwo.addEventListener('click', ()=>{
+    itemTwo.classList.toggle('activecheck');
+    checkTwo.classList.toggle('checked');
+
+    const display2 = getComputedStyle(markTwo).getPropertyValue('display');
+
+    if (display2 === 'none') {
+        markTwo.style.display = 'block';
+    }else{
+        markTwo.style.display = 'none';
+
+    }
+});
+itemThree.addEventListener('click', ()=>{
+    itemThree.classList.toggle('activecheck');
+    checkThree.classList.toggle('checked');
+
+    const display3 = getComputedStyle(markThree).getPropertyValue('display');
+
+    if (display3 === 'none') {
+        markThree.style.display = 'block';
+    }else{
+        markThree.style.display = 'none';
+
+    }
+});
+
+
+
+const toPageTwo = document.getElementById('backtoPagetwo');
+const toPageFour = document.getElementById('toPage4');
+
+toPageTwo.onclick = ()=> {
+    stepThreePage.style.display = 'none';
+    stepTwoPage.style.display = 'flex';
+    stepThreeBtn.classList.remove('active');
+    stepTwoBtn.classList.add('active');
+};
+toPageFour.onclick = ()=> {
+    stepThreePage.style.display = 'none';
+    stepFourPage.style.display ='flex';
+    stepThreeBtn.classList.remove('active');
+    stepFourBtn.classList.add('active');
+};
+
+
+// ------------------------page4----------------------------
+
+
+const changePlan = document.getElementById('changePlan');
+
+changePlan.addEventListener('click', () =>{
+    stepFourPage.style.display = 'none';
+    stepTwoPage.style.display = 'flex';
+    stepFourBtn.classList.remove('active');
+    stepTwoBtn.classList.add('active');
+})

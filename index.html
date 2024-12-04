@@ -17,7 +17,7 @@
             <!-- Sidebar start -->
             <div class="form-left">
                 <div class="number">
-                    <span class="step active" id="one">1</span>
+                    <span class="step " id="one">1</span>
                     <div class="one-desc">
                         <p>Step 1</p>
                         <h2>Your info</h2>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="number">
-                    <span class="step" id="four">4</span>
+                    <span class="step active" id="four">4</span>
                     <div class="one-desc">
                         <p>Step 4</p>
                         <h2>Summary</h2>
@@ -130,19 +130,124 @@
                     <p id="yearly" class="inactive">Yearly</p>
                 </div>
 
-                <div class="pagetwoNav">
+                <div class="pageNav">
                     <p id="toPage1">Go Back</p>
 
                     <button type="button" id="toPage3">Next Step</button>
                 </div>
             </div>
-            <!-- <form class="form-right-step-3"> -->
 
-            <!-- </form>
-            <form class="form-right-step-4">
+            <!-- Step 2 end -->
 
-            </form>
-            <form class="form-right-step-5"> -->
+
+            <!-- Step 3 start -->
+            
+            <div class="form-right-step-3" id="stepThreePage">
+                <div class="header">
+                    <h1>Pick add-ons</h1>
+                    <p>Add-ons help enhance your gaming experience.</p>
+                </div>
+
+                <div class="checkbox-list">
+                    <div class="checkbox" id="item1">
+                        <div class="checkbox-left">
+                            <span class="check" id="check1">
+                                <img src="assets/images/icon-checkmark.svg" alt="" id="mark1">
+                            </span>
+
+                            <div class="checkbox-text">
+                                <h2>Online service</h2>
+                                <p>Access to multiplayer games</p>
+                            </div>
+                        </div>
+
+                        <p id="checkprice1" class="checkbox-price">+$1/mo</p>
+                        
+                    </div>
+                    
+                    <div class="checkbox" id="item2">
+                        <div class="checkbox-left">
+                            <span class="check" id="check2">
+                                <img src="assets/images/icon-checkmark.svg" alt="" id="mark2">
+                            </span>
+                            
+                            <div class="checkbox-text">
+                                <h2>Larger storage </h2>
+                                <p>Extra 1TB of cloud save</p>
+                            </div>
+                        </div>
+
+                        <p id="checkprice2" class="checkbox-price">+$2/mo</p>
+                        
+                    </div>
+                    
+                    <div class="checkbox" id="item3">
+                        <div class="checkbox-left">
+                            <span class="check" id="check3">
+                                <img src="assets/images/icon-checkmark.svg" alt="" id="mark3">
+                            </span>
+                            
+                            <div class="checkbox-text">
+                                <h2>Customizable Profile</h2>
+                                <p>Custom theme on your profile</p>
+                            </div>
+                            
+                        </div>
+                        <p id="checkprice3" class="checkbox-price">+$2/mo</p>
+                        
+                    </div>
+                </div>
+
+                <div class="pageNav">
+                    <p id="backtoPagetwo">Go Back</p>
+
+                    <button type="button" id="toPage4">Next Step</button>
+                </div>
+
+            </div>
+
+            <!-- Step 3 end -->
+
+
+            <!-- Step 4 start -->
+
+            <div class="form-right-step-4" id="stepFourPage">
+                <div class="header">
+                    <h1>Finishing up</h1>
+                    <p>Double-check everything looks OK before confirming.</p>
+                </div>
+
+                <div class="summary">
+                    <div class="summary-list">
+                        <div class="plan-select">
+                            <div class="select-left">
+                                <h2 id="planClass">Arcade <span id="planType">(Yearly)</span></h2>
+                                <p id="changePlan">Change</p>
+                            </div>
+                            <p id="finalPlanprice">$90/yr</p>
+                        </div>
+                        <hr>
+
+                        <div class="addOns">
+                            <p id="addOnName">Online service</p>
+                            <p id="addOnPrice">+$10/yr</p>
+                        </div>
+                    </div>
+
+                    <div class="totalPriceDiv">
+                        <p id="totalSpecs">Total (per year)</p>
+                        <h2 id="finalPrice">$120/yr</h2>
+                    </div>
+                </div>
+
+                <div class="pageNav">
+                    <p id="backtoPagethree">Go Back</p>
+
+                    <button type="button" id="toPage5">Confirm</button>
+                </div>
+
+            </div>
+            <!-- <form class="form-right-step-5"> -->
 
             <!-- </form>  -->
         </div>
